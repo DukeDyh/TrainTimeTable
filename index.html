@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+		<style>
+		</style>
+	</head>
+	<body>
+		<div data-role = "page" id="index1" >
+			<div data-role = "header">
+				<h1>列车查询</h1>
+			</div>
+			<div data-role="main" class="ui-content" class="data">
+				<from>
+					<div class="ui-field-contain">
+						<label>发车站</label>
+						<input type="text" name="start"/>
+					</div>
+					<div class="ui-field-contain">
+						<label>到达站</label>
+						<input type="text" name="end" />
+					</div>
+					<div class="ui-field-contain">
+						<label>车次</label>
+						<input type="text" name="number"/>
+					</div>
+					<input type="button" class="ui-btn ui-btn-a ui-shadow ui-corner-all search show-page-loading-msg" value="搜索">
+				</from>
+				<ul data-role="listview" data-inset="true" id="list">
+				</ul>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#index1" class="ui-btn-icon-top ui-icon-grid ui-btn-active">查询</a></li>
+						<li><a class="ui-btn-icon-top ui-icon-star">收藏</a></li>
+						<li><a class="ui-btn-icon-top ui-icon-search">搜索</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div data-role = "page" id="detail" >
+			<div data-role = "header">
+				<h1>列车查询</h1>
+			</div>
+			<div data-role="main" class="ui-content" >
+				<h2></h2>
+				<table data-role="table" data-mode="reflow" class="ui-responsive table-stroke ui-corner-all ui-shadow" id="result-table">
+					<thead>
+						<tr>
+							<th>站名</th>
+							<th>到站时间</th>
+							<th>出发时间</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!--<tr>
+							<td>1</td>
+							<td>2</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>2</td>
+							<td>3</td>
+						</tr>-->
+					</tbody>
+				</table>
+				<a  href="#index1"  class="ui-btn ui-btn-a ui-shadow ui-corner-all">返回</a>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#index1" class="ui-btn-icon-top ui-icon-grid ui-btn-active">查询</a></li>
+						<li><a class="ui-btn-icon-top ui-icon-star">收藏</a></li>
+						<li><a class="ui-btn-icon-top ui-icon-search">搜索</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	<script src="js/jquery-2.1.0.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/main.js"></script>
+	</body>
+</html>
